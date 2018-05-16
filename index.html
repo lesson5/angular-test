@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS入門</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+
+	<h1>はじめてのAngularJS</h1>
+	
+	<h2>基本</h2>
+	
+	<input type="text" ng-model="name">
+	<p>上のinputの内容をリアルタイムに反映{{name}}</p>
+	<p>jsの基本的な数式も書ける{{5*3}}</p>
+	
+	<h2>コントローラー</h2>
+	
+	<div ng-controller="MainController">
+		<p>{{users.length}} users.</p>
+		<ul>
+			<li ng-repeat="user in users">
+				氏名：{{user.name}} 年齢：{{user.age}} 性別：{{user.gendar}}
+			</li>
+		</ul>
+	</div>
+	
+</body>
+</html>
